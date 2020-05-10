@@ -1,5 +1,10 @@
 # maven-spring-sandbox
 
+## Getting started
+### Running in CLI
+`mvn spring-boot:run`
+
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
