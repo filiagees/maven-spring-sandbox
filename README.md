@@ -17,6 +17,28 @@ To check if coverage level is under minimum expected (see `pom.xml` for details)
 
 `mvn clean verify`
 
+#### Details
+##### Different results of coverage
+Pay attention to slight different value of code coverage, according the way it was invoked.
+For example:
+* with `mvn clean verify` there is 98% (missed 2 of 114 instructions)
+* with Intellij's *Run with Coverage* there is 94% (missed 6 of 118 instructions) 
+
+##### Covering Spring Code
+To cover Spring code properly pay attention to pom.xml entry:
+
+     <execution>
+        <id>default-report</id>
+        <phase>verify</phase>
+        <goals>
+            <goal>report</goal>
+        </goals>
+    </execution>
+
+### Extra links (answers, repositories):
+* StackOverflow: [Generate Code Coverage with JaCoCo and spring-boot-maven-plugin](https://stackoverflow.com/a/60040545/7362660)
+* Project: https://github.com/maciejwalkowiak/jacoco-spring-boot-maven-plugin-sample
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
