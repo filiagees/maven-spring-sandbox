@@ -4,6 +4,18 @@
 ### Running in CLI
 `mvn spring-boot:run`
 
+### Testing and Code coverage
+Run simple tests:
+
+`mvn clean test`
+
+An updated report will be generated in the folder: 
+
+`/target/site/jacoco/index.html`
+
+To check if coverage level is under minimum expected (see `pom.xml` for details):
+
+`mvn clean verify`
 
 ### Reference Documentation
 For further reference, please consider the following sections:
