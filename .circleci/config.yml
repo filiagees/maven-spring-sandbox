@@ -4,6 +4,8 @@ jobs:
   maven/test:
 ##    Remember to set the 'CC_TEST_REPORTER_ID' environment variable to your proper value, in your CI provider!
 #
+    environment:
+      JACOCO_SOURCE_PATH: 'src/main/java'
     docker:
       - image: circleci/openjdk:13-jdk-buster
     steps:
@@ -30,12 +32,13 @@ jobs:
           command: |
             ./cc-test-reporter before-build
             mvn verify --settings 'pom.xml'
-#            ./cc-test-reporter after-build --coverage-input-type jacoco --exit-code $?
-            JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter \
+            ./cc-test-reporter \
               format-coverage target/site/jacoco/jacoco.xml     \
               --input-type jacoco
             ./cc-test-reporter upload-coverage
 ##           See: https://github.com/codeclimate/test-reporter/issues/259
+#            ./cc-test-reporter after-build --coverage-input-type jacoco --exit-code $?
+
       - save_cache:
           paths:
             - ~/.m2
