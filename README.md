@@ -1,4 +1,6 @@
 # maven-spring-sandbox
+[![Maintainability](https://api.codeclimate.com/v1/badges/d4226370f71e129e187d/maintainability)](https://codeclimate.com/github/filiagees/maven-spring-sandbox/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d4226370f71e129e187d/test_coverage)](https://codeclimate.com/github/filiagees/maven-spring-sandbox/test_coverage)
 
 ## Getting started
 ### Running in CLI
